@@ -15,9 +15,10 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
     { name: 'Home', href: '#home-section', current: false },
-    { name: 'About us', href: '#about-section', current: false },
-    { name: 'Recipe', href: '#cook-section', current: false },
+    { name: 'About Us', href: '#about-section', current: false },
+    { name: 'Menu', href: '#cook-section', current: false },
     { name: 'Gallery', href: '#gallery-section', current: false },
+    { name: 'Contact Us', href: '#contact-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -40,13 +41,13 @@ const Navbar = () => {
                             <div className="flex sm:hidden flex-shrink-0 items-center border-right">
                                 <Image src="/images/Logo/Logo.svg" alt="logo" width={36} height={36} />
                                 <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                                    Chef&apos;s Kitchen.
+                                J J Black Forest
                                 </Link>
                             </div>
                             <div className="hidden sm:flex flex-shrink-0 items-center border-right">
                                 <Image src="/images/Logo/Logo.svg" alt="logo" width={56} height={56} />
                                 <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                                    Chef&apos;s Kitchen.
+                                    J J Black Forest
                                 </Link>
                             </div>
 
@@ -73,10 +74,9 @@ const Navbar = () => {
                             <div className='gap-6 hidden lg:flex'>
                                 <div className='flex items-center gap-2'>
                                     <Image src={'/images/Navbar/phone.svg'} alt="phone-image" width={19} height={19} />
-                                    <p className='text-lg font-medium'>+1(909) 235-9814</p>
+                                    <p className='text-lg font-medium'>+91 98942 39058 </p>
                                 </div>
                                 {/* <button className='flex justify-end text-xl font-medium bg-bgpink text-pink py-4 px-4 lg:px-8 navbutton rounded-full hover:text-black'>Sign in</button> */}
-                                <Signindialog />
                             </div>
                         </div>
 

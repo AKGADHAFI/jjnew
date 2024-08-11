@@ -3,19 +3,20 @@ import Features from './components/Work/index';
 import Cook from './components/Cook/index';
 import Expert from './components/Expert/index';
 import Gallery from './components/Gallery/index';
-import Newsletter from './components/Newsletter/Newsletter';
+import Contact from './components/Contact/index';
 
 
-
+//https://jjblackforest.vercel.app/
 export default function Home() {
   return (
-    <main>
+    <>
       <Banner />
       <Features />
       <Cook />
-      <Expert />
+      {/* <Expert /> */}
       <Gallery />
-      <Newsletter />
-    </main>
+      <Contact/>
+    </>
   )
+  
 }
