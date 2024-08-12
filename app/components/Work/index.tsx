@@ -76,7 +76,7 @@ const Work = () => {
                         {cardData.map((items, i) => (
                             <div className='card-b p-8 relative rounded-3xl' key={i}>
                             <div className='work-img-bg rounded-full flex justify-center absolute top-[-50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-1/2 transform -translate-x-1/2'>
-                            <Image src={items.imgSrc} alt={items.imgSrc} width={170} height={170} />
+                            <Image src={items.imgSrc} alt={items.imgSrc} width={170} height={140} />
                         </div>
                         
                                 <h3 className='text-2xl text-black font-semibold text-center mt-16'>{items.heading}</h3>
