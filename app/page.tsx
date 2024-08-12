@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Banner />
       <Features />
-      <Cook />
+      {/* <Cook /> */}
       {/* <Expert /> */}
       <Gallery />
       <Contact/>

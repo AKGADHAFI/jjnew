@@ -15,22 +15,22 @@ const FooterSocialLinks = () => {
             width={50}
             height={50}
           />
-          <h4 className="text-darkgrey text-xl font-semibold mt-4">J J Black Forest</h4>
+          <h4 className="text-darkgrey text-xl md:text-2xl font-semibold mt-4">J J Black Forest</h4>
           
           {/* Address */}
-          <div className="flex items-center text-lg text-darkgrey mt-4">
+          <div className="flex items-center text-base md:text-lg text-darkgrey mt-4">
             <FaMapMarkerAlt className="mr-2" />
             <span>51, National Highway 226, Thirupathur, Sivagangai-630 211, Tamil Nadu.</span>
           </div>
           
           {/* Phone */}
-          <div className="flex items-center text-lg text-darkgrey mt-2">
+          <div className="flex items-center text-base md:text-lg text-darkgrey mt-2">
             <FaPhoneAlt className="mr-2" />
             <span>+91 98942 39058</span>
           </div>
           
           {/* Email */}
-          <div className="flex items-center text-lg text-darkgrey mt-2">
+          <div className="flex items-center text-base md:text-lg text-darkgrey mt-2">
             <FaEnvelope className="mr-2" />
             <span>info@jjblackforest.com</span>
           </div>

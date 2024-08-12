@@ -28,24 +28,24 @@ const cardData: cardDataType[] = [
         subheading: "Biscuits, Sweet Treats, Baked Delights.",
     },
     {
-        imgSrc: '/images/Features/coffee.svg',
+        imgSrc: '/images/Features/drink.svg',
         heading: "Cooldrinks and Juices",
         subheading: "Beverages, Refreshments, Chilled Drinks.",
     },
     {
-        imgSrc: '/images/Features/drink.svg',
+        imgSrc: '/images/Features/ice-cream.svg',
         heading: "Ice Creams",
         subheading: "Frozen Desserts, Gelato, Creamy Delights.",
     },
     {
-        imgSrc: '/images/Features/ice-cream.svg',
+        imgSrc: '/images/Features/coffee.svg',
         heading: "Tea-Coffee",
         subheading: "Hot Beverages, Brewed Drinks, Warm Sips.",
     },
     {
         imgSrc: '/images/Features/laddu.svg',
         heading: "Sweets and Desserts",
-        subheading: "Desserts, Sweet Treats, Sugary Delights.",
+        subheading: "Sweet Treats, Sugary Delights.",
     },
     {
         imgSrc: '/images/Features/sweets.svg',
