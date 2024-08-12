@@ -1,61 +1,55 @@
 import Link from "next/link";
 import Image from "next/image";
-
-interface SocialLink {
-  imgSrc: string;
-  link: string;
-  width: number;
-}
-
-const socialLinks: SocialLink[] = [
-  {
-    imgSrc: "/images/Footer/facebook.svg",
-    link: "https://facebook.com",
-    width: 10,
-  },
-  {
-    imgSrc: "/images/Footer/insta.svg",
-    link: "https://instagram.com",
-    width: 14,
-  },
-  {
-    imgSrc: "/images/Footer/twitter.svg",
-    link: "https://twitter.com",
-    width: 14,
-  },
-];
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const FooterSocialLinks = () => {
   return (
     <div className="py-10 border-t border-t-bordertop">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        {/* Social Links */}
-        <div className="flex gap-4 justify-center md:justify-start">
-          {socialLinks.map((item, index) => (
-            <Link href={item.link} key={index} passHref>
-              <div className="bg-white h-10 w-10 shadow-xl text-base rounded-full flex items-center justify-center footer-icons hover:bg-pink">
-                <Image
-                  src={item.imgSrc}
-                  alt={item.link}
-                  width={item.width}
-                  height={item.width}
-                  className="sepiaa"
-                />
-              </div>
-            </Link>
-          ))}
+      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        
+        {/* Contact Info */}
+        <div className="mb-8">
+          <Image
+            src="/images/Logo/logoo.svg"
+            alt="J J Black Forest Logo"
+            width={50}
+            height={50}
+          />
+          <h4 className="text-darkgrey text-xl font-semibold mt-4">J J Black Forest</h4>
+          
+          {/* Address */}
+          <div className="flex items-center text-lg text-darkgrey mt-4">
+            <FaMapMarkerAlt className="mr-2" />
+            <span>51, National Highway 226, Thirupathur, Sivagangai-630 211, Tamil Nadu.</span>
+          </div>
+          
+          {/* Phone */}
+          <div className="flex items-center text-lg text-darkgrey mt-2">
+            <FaPhoneAlt className="mr-2" />
+            <span>+91 98942 39058</span>
+          </div>
+          
+          {/* Email */}
+          <div className="flex items-center text-lg text-darkgrey mt-2">
+            <FaEnvelope className="mr-2" />
+            <span>info@jjblackforest.com</span>
+          </div>
         </div>
+
         {/* Footer Text */}
-        <h4 className="text-darkgrey text-sm text-center md:text-start font-normal mt-5 md:mt-0">
-          @ 2024 J J Black Forest Web Page. Design by{" "}
-          <Link
-            href="https://www.linkedin.com/in/abdul-kareem-gadhafi-a-355533213/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AKG
-          </Link>
-        </h4>
+        <div className="mt-auto w-full text-center md:text-left">
+          <h4 className="text-darkgrey text-sm font-normal mt-5">
+            @ 2024 J J Black Forest Web Page. Design by{" "}
+            <Link
+              href="https://www.linkedin.com/in/abdul-kareem-gadhafi-a-355533213/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              AKG
+            </Link>
+          </h4>
+        </div>
       </div>
     </div>
   );

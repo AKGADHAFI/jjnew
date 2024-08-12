@@ -9,33 +9,48 @@ interface cardDataType {
     imgSrc: string;
     heading: string;
     subheading: string;
-    link: string;
 }
 
 const cardData: cardDataType[] = [
     {
-        imgSrc: '/images/Features/featureOne.svg',
-        heading: "Menu variations",
-        subheading: "Sed ut perspiciatis unde omnis iste natus error",
-        link: 'Learn more'
+        imgSrc: '/images/Features/cake.svg',
+        heading: "Birthday Special Cake",
+        subheading: "Celebration Cakes, Festive Cakes, Party Cakes.",
     },
     {
-        imgSrc: '/images/Features/featureTwo.svg',
-        heading: "Cooking warw",
-        subheading: "Sed ut perspiciatis unde omnis iste natus error",
-        link: 'Learn more'
+        imgSrc: '/images/Features/snacks.svg',
+        heading: "Snacks",
+        subheading: "Appetizers, Finger Foods, Bite.",
     },
     {
-        imgSrc: '/images/Features/featureThree.svg',
-        heading: "Best chef",
-        subheading: "Sed ut perspiciatis unde omnis iste natus error",
-        link: 'Learn more'
+        imgSrc: '/images/Features/cookies.svg',
+        heading: "Cookies",
+        subheading: "Biscuits, Sweet Treats, Baked Delights.",
     },
     {
-        imgSrc: '/images/Features/featureFour.svg',
-        heading: "Fast food",
-        subheading: "Sed ut perspiciatis unde omnis iste natus error",
-        link: 'Learn more'
+        imgSrc: '/images/Features/coffee.svg',
+        heading: "Cooldrinks and Juices",
+        subheading: "Beverages, Refreshments, Chilled Drinks.",
+    },
+    {
+        imgSrc: '/images/Features/drink.svg',
+        heading: "Ice Creams",
+        subheading: "Frozen Desserts, Gelato, Creamy Delights.",
+    },
+    {
+        imgSrc: '/images/Features/ice-cream.svg',
+        heading: "Tea-Coffee",
+        subheading: "Hot Beverages, Brewed Drinks, Warm Sips.",
+    },
+    {
+        imgSrc: '/images/Features/laddu.svg',
+        heading: "Sweets and Desserts",
+        subheading: "Desserts, Sweet Treats, Sugary Delights.",
+    },
+    {
+        imgSrc: '/images/Features/sweets.svg',
+        heading: "Candies and Chocolates",
+        subheading: "Confections, Candy Treats, Sugar Drops.",
     }
 
 ]
@@ -51,7 +66,7 @@ const Work = () => {
                         <h3 className='text-pink text-lg font-normal mb-3 ls-51 uppercase'>Our Distinctive Bakes</h3>
                     </Fade>
                     <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-                        <p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Indulge in Our Signature Flavors<br /> features.</p>
+                        <p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Indulge in Our Signature Flavors and <br /> Specialities.</p>
                     </Fade>
                 </div>
 
@@ -60,9 +75,10 @@ const Work = () => {
                     <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
                         {cardData.map((items, i) => (
                             <div className='card-b p-8 relative rounded-3xl' key={i}>
-                                <div className='work-img-bg rounded-full flex justify-center absolute top-[-50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[0%]'>
-                                    <Image src={items.imgSrc} alt={items.imgSrc} width={510} height={10} />
-                                </div>
+                            <div className='work-img-bg rounded-full flex justify-center absolute top-[-50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-1/2 transform -translate-x-1/2'>
+                            <Image src={items.imgSrc} alt={items.imgSrc} width={170} height={170} />
+                        </div>
+                        
                                 <h3 className='text-2xl text-black font-semibold text-center mt-16'>{items.heading}</h3>
                                 <p className='text-lg font-normal text-black text-center text-opacity-50 mt-2'>{items.subheading}</p>
                                 <div className='flex items-center justify-center'>
