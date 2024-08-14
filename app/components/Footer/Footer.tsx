@@ -20,19 +20,19 @@ const FooterSocialLinks = () => {
           {/* Address */}
           <div className="flex items-center text-base md:text-lg text-darkgrey mt-4">
             <FaMapMarkerAlt className="mr-2" />
-            <span>51, National Highway 226, Thirupathur, Sivagangai-630 211, Tamil Nadu.</span>
+            <span>Madurai Road , APSA College, Thirupathur, Sivagangai-630 211, Tamil Nadu.</span>
           </div>
           
           {/* Phone */}
           <div className="flex items-center text-base md:text-lg text-darkgrey mt-2">
             <FaPhoneAlt className="mr-2" />
-            <span>+91 98942 39058</span>
+            <span>+91 90807 95769</span>
           </div>
           
           {/* Email */}
           <div className="flex items-center text-base md:text-lg text-darkgrey mt-2">
             <FaEnvelope className="mr-2" />
-            <span>info@jjblackforest.com</span>
+            <span>jjblackforest@gmail.com</span>
           </div>
         </div>
 
