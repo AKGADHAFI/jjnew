@@ -1,9 +1,8 @@
 "use client"
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
-// Define the shape of the data prop
 interface ContactProps {
   data?: {
     address?: string;
@@ -20,6 +19,7 @@ const initialState = {
 
 const Contact = ({ data }: ContactProps) => {
   const [{ name, email, message }, setState] = useState(initialState);
+  const [showPopup, setShowPopup] = useState(false);  // New state for the popup
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -39,17 +39,20 @@ const Contact = ({ data }: ContactProps) => {
       message: message,
     };
 
-    // emailjs
-    //   .send("service_1j93fle", "template_h8vl1t5", templateParams, "LAX-a0cAWUDoia4Ja")
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       clearState();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .send("service_vvze7if", "template_y8id0hu", templateParams, "_tzrWUkBn4pWRBuag")
+      .then(
+        (result) => {
+          console.log("successfullll..");
+          console.log(result.text);
+          setShowPopup(true);  // Show popup on success
+          clearState();  // Clear form fields
+          setTimeout(() => setShowPopup(false), 3000);  // Hide popup after 3 seconds
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -64,7 +67,7 @@ const Contact = ({ data }: ContactProps) => {
             </Fade>
             <Fade direction={'up'} delay={600} cascade damping={1e-1} triggerOnce={true}>
               <p className='text-grey lg:text-lg font-normal mb-10 lg:text-start text-center'>
-              Fill out the form below and send us your message. We will respond as quickly as we can.
+                Fill out the form below and send us your message. We will respond as quickly as we can.
               </p>
             </Fade>
             <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
@@ -77,6 +80,7 @@ const Contact = ({ data }: ContactProps) => {
                     className="form-control px-4 py-3 border rounded-md"
                     placeholder="Name"
                     required
+                    value={name}
                     onChange={handleChange}
                   />
                   <input
@@ -86,6 +90,7 @@ const Contact = ({ data }: ContactProps) => {
                     className="form-control px-4 py-3 border rounded-md"
                     placeholder="Email"
                     required
+                    value={email}
                     onChange={handleChange}
                   />
                 </div>
@@ -96,6 +101,7 @@ const Contact = ({ data }: ContactProps) => {
                   rows={4}
                   placeholder="Message"
                   required
+                  value={message}
                   onChange={handleChange}
                 ></textarea>
                 <button type="submit" className='w-full md:w-auto text-xl font-medium rounded-full text-white py-5 px-6 bg-pink lg:px-14'>
@@ -103,6 +109,13 @@ const Contact = ({ data }: ContactProps) => {
                 </button>
               </form>
             </Fade>
+            {showPopup && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white p-6 rounded-md shadow-md">
+                  <p className="text-lg text-green-500">Message Sent Successfully!..<br/>ThankYou For Spend Time With Us</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
