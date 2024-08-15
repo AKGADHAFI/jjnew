@@ -238,7 +238,7 @@ const images = [
         height: 405,
     },
     {
-        src: "/images/Gallery/img40.jpg",
+        src: "/images/Gallery/img40.jpeg",
         alt: "pizza-two",
         width: 700,
         height: 405,
@@ -256,7 +256,7 @@ const images = [
         height: 405,
     },
     {
-        src: "/images/Gallery/img43.jpeg",
+        src: "/images/Gallery/img43.png",
         alt: "pizza-one",
         width: 700,
         height: 405,
