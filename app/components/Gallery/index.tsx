@@ -237,6 +237,38 @@ const images = [
         width: 700,
         height: 405,
     },
+    {
+        src: "/images/Gallery/img40.jpg",
+        alt: "pizza-two",
+        width: 700,
+        height: 405,
+    },
+    {
+        src: "/images/Gallery/img41.jpg",
+        alt: "pizza-one",
+        width: 700,
+        height: 405,
+    },
+    {
+        src: "/images/Gallery/img42.jpg",
+        alt: "pizza-two",
+        width: 700,
+        height: 405,
+    },
+    {
+        src: "/images/Gallery/img43.jpg",
+        alt: "pizza-one",
+        width: 700,
+        height: 405,
+    },
+    {
+        src: "/images/Gallery/img44.jpg",
+        alt: "pizza-two",
+        width: 700,
+        height: 405,
+    },
+    
+
 ];
 
 const Gallery = () => {
