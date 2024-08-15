@@ -10,7 +10,7 @@ const FooterSocialLinks = () => {
         {/* Contact Info */}
         <div className="mb-8">
           <Image
-            src="/images/Logo/logoo.svg"
+            src="/images/Logo/img.svg"
             alt="J J Black Forest Logo"
             width={50}
             height={50}
